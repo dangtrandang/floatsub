@@ -1,0 +1,26 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+*/build
+.cxx/
+*.apk
+*.aab
+captures/
+.externalNativeBuild
+.cxx
+*.keystore
+!debug.keystore
+
+# Built binaries & models downloaded at runtime
+*.bin
+*.zip
+models/
+vosk-model*
+
+# Temp screenshots & tools
+screen_*.png
+*.ps1
+.vscode/

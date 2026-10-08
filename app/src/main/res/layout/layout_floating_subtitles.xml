@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <LinearLayout
+        android:id="@+id/cardSubtitleBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_floating_subtitles"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="7dp">
+
+        <!-- Header / Drag bar -->
+        <LinearLayout
+            android:id="@+id/layoutDragHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDragHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="6dp"
+                android:text="⠿"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvOverlayBadge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="FloatSub Live"
+                android:textColor="#C084FC"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <!-- Toggle Source Text -->
+            <TextView
+                android:id="@+id/btnToggleSourceView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#22FFFFFF"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="2dp"
+                android:text="Ẩn gốc"
+                android:textColor="#E2E8F0"
+                android:textSize="9.5sp" />
+
+            <!-- Background Opacity Cycle Button -->
+            <TextView
+                android:id="@+id/btnOverlayBgOpacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="#22FFFFFF"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="2dp"
+                android:text="Nền: Mờ"
+                android:textColor="#E2E8F0"
+                android:textSize="9.5sp" />
+
+            <!-- Minimize to Bubble Button -->
+            <TextView
+                android:id="@+id/btnOverlayMinimize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="#22FFFFFF"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="2dp"
+                android:text="Thu nhỏ"
+                android:textColor="#E2E8F0"
+                android:textSize="9.5sp" />
+
+            <!-- Stop Button -->
+            <TextView
+                android:id="@+id/btnOverlayStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="#33EF4444"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="2dp"
+                android:text="✕ Dừng"
+                android:textColor="#FCA5A5"
+                android:textSize="9.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Source text (optional, collapsible, max 2 lines) -->
+        <TextView
+            android:id="@+id/tvOverlaySource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:shadowColor="#CC000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="(Đang chờ âm thanh phát ra...)"
+            android:textColor="#94A3B8"
+            android:textSize="10.5sp" />
+
+        <!-- Translated subtitle (prominent, readable, max 2 lines balanced) -->
+        <TextView
+            android:id="@+id/tvOverlayTranslated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:shadowColor="#EE000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:text="(Phụ đề sẽ hiển thị ở đây)"
+            android:textColor="#34D399"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</FrameLayout>
